@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💐 Chúc mừng 20/10 💐</title>
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(circle at center, #ffedf3 0%, #ffc6e0 100%);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 2.8em;
+    color: #ff2e78;
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff6ba0; }
+    to { text-shadow: 0 0 25px #ff1493, 0 0 40px #ff6ba0; }
+  }
+  .falling {
+    position: absolute;
+    width: 60px;
+    opacity: 0.85;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.falling {
+  position: absolute;
+  top: -100px;
+  opacity: 0.9;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+  #gift {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 192, 203, 0.8);
+    border: 4px solid white;
+    z-index: 5;
+    transition: transform 0.8s ease;
+  }
+  #gift:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  button {
+    display: block;
+    margin: 450px auto 0;
+    background: #ff5da2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+    position: relative;
+  }
+
+  button:hover {
+    background: #ff80b7;
+  }
+  #card {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+    width: 320px;
+    padding: 25px;
+    text-align: center;
+    color: #333;
+    z-index: 20;
+    transition: all 0.8s ease;
+  }
+
+  #card.show {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  #card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+@media (max-width: 600px) {
+    #gift {
+      width: 180px;
+      height: 180px;
+    }
+    #card {
+      width: 280px;
+      font-size: 1em;
+    }
+    h1 {
+      font-size: 2em;
+      margin-top: 40px;
+    }
+    button {
+      font-size: 1em;
+      padding: 10px 25px;
+    }
+  }
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: radial-gradient(circle at center, #fff0f5 0%, #ffe6eb 100%);
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: #b30059;
+}
+
+#gift {
+  width: 220px;
+  margin-top: 50px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+button {
+  background-color: #ff99c8;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff80b0;
+}
+
+.card {
+  display: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.6);
+}
+
+.card.show {
+  display: block;
+  animation: fadeIn 1s ease forwards;
+}
+
+.card-img {
+  width: 120px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.falling {
+  position: absolute;
+  top: -100px;
+  opacity: 0.9;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+</style>
+</head>
+<body>
+  <audio id="bgMusic" src="music.mp3" loop></audio>
+  <script>
+    document.body.addEventListener('click', () => {
+      document.getElementById('bgMusic').play();
+    }, { once: true });
+  </script>
+
+  <div id="intro">
+    <img src="gift.png" alt="Món quà" id="gift">
+    <h1>🌸 Gửi tặng Mẹ và các Chị nhân ngày 20/10 🌸</h1>
+
+    <div class="buttons">
+      <button onclick="showCard('mom')">💌 Gửi Mẹ 💌</button>
+      <button onclick="showCard('sister')">💐 Gửi các Chị 💐</button>
+    </div>
+  </div>
+
+  <div id="card-mom" class="card">
+    <img src="mom.png" alt="Mẹ" class="card-img">
+    <p>💖 Gửi Mẹ yêu thương 💖<br><br>
+    Nhân ngày Phụ Nữ Việt Nam 20/10,<br>
+    con xin chúc Mẹ thật nhiều sức khỏe,  
+    luôn vui vẻ và hạnh phúc.<br><br>
+    Cảm ơn Mẹ vì những hy sinh thầm lặng,  
+    vì tình yêu bao la và ấm áp Mẹ dành cho gia đình. 🌷</p>
+  </div>
+
+  <div id="card-sister" class="card">
+    <img src="sister.png" alt="Chị" class="card-img">
+    <p>🌸 Gửi đến các Chị yêu quý 🌸<br><br>
+    Chúc các Chị luôn xinh đẹp, tự tin,  
+    thành công và thật hạnh phúc trong cuộc sống. 💕<br><br>
+    Cảm ơn các Chị đã luôn yêu thương, giúp đỡ  
+    và mang đến tiếng cười cho cả gia đình. 💐</p>
+  </div>
+
+  <script>
+    const totalFlowers = 20;
+    const totalHearts = 15;
+
+    for (let i = 0; i < totalFlowers; i++) {
+      let f = document.createElement('img');
+      f.src = 'flower.png';
+      f.className = 'falling flower';
+      resetPosition(f);
+      document.body.appendChild(f);
+      f.addEventListener('animationiteration', () => resetPosition(f));
+    }
+
+    for (let i = 0; i < totalHearts; i++) {
+      let h = document.createElement('img');
+      h.src = 'heart.png';
+      h.className = 'falling heart';
+      resetPosition(h);
+      document.body.appendChild(h);
+      h.addEventListener('animationiteration', () => resetPosition(h));
+    }
+
+    function resetPosition(el) {
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.top = '-' + (Math.random() * 100) + 'px';
+      el.style.animationDuration = 5 + Math.random() * 6 + 's';
+      el.style.width = 40 + Math.random() * 40 + 'px';
+    }
+
+    function showCard(type) {
+      document.getElementById('card-mom').classList.remove('show');
+      document.getElementById('card-sister').classList.remove('show');
+      
+      if (type === 'mom') {
+        document.getElementById('card-mom').classList.add('show');
+      } else if (type === 'sister') {
+        document.getElementById('card-sister').classList.add('show');
+      }
+    }
+  </script>
+</body>
+</html>
